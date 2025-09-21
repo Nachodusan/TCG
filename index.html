@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon TCG Store</title>
+    <link rel="stylesheet" href="/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Overlay para el carrito -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <span>Pokémon TCG Store</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li class="cart-icon" id="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count" id="cart-count">0</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>¡Atrapa Todas Las Cartas Pokémon!</h1>
+        <p>
+          Descubre las mejores cartas Pokémon TCG para tu colección. Envíos a
+          todo el mundo.
+        </p>
+        <a href="#products" class="btn">Ver Colección</a>
+      </div>
+    </section>
+
+    <!-- Expansiones -->
+    <section class="expansions">
+      <div class="container">
+        <div class="expansions-header">
+          <h2 class="expansions-title">Expansiones</h2>
+          <div class="expansions-nav">
+            <button class="nav-btn" id="prev-expansion">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-btn" id="next-expansion">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="expansions-container">
+          <div class="expansions-grid" id="expansions-grid">
+            <!-- Las expansiones se cargarán con JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="products" id="products">
+      <div class="container">
+        <h2 class="section-title">Nuestras Cartas Destacadas</h2>
+        <div class="product-grid" id="product-grid">
+          <!-- Los productos se cargarán con JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrito -->
+    <div class="cart-modal" id="cart-modal">
+      <div class="cart-header">
+        <h2>Tu Carrito</h2>
+        <button class="close-cart" id="close-cart">×</button>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <!-- Los items del carrito se cargarán con JavaScript -->
+      </div>
+      <div class="cart-total" id="cart-total">Total: $0.00</div>
+      <button class="checkout-btn" id="checkout-btn">Finalizar Compra</button>
+    </div>
+
+    <section class="reviews" id="reviews">
+      <h2 class="reviews__title">Valoraciones de nuestros clientes</h2>
+      <div class="reviews__list">
+        <article class="review">
+          <h3 class="review__name">Carlos M.</h3>
+          <div class="review__rating">⭐⭐⭐⭐⭐</div>
+          <p class="review__text">
+            Excelente servicio, las cartas llegaron en perfecto estado y muy
+            rápido.
+          </p>
+        </article>
+
+        <article class="review">
+          <h3 class="review__name">Ana P.</h3>
+          <div class="review__rating">⭐⭐⭐⭐</div>
+          <p class="review__text">
+            Muy buena atención, aunque me gustaría ver más variedad en
+            expansiones.
+          </p>
+        </article>
+
+        <article class="review">
+          <h3 class="review__name">Luis R.</h3>
+          <div class="review__rating">⭐⭐⭐⭐⭐</div>
+          <p class="review__text">
+            La mejor tienda online de TCG que he probado, 100% recomendada.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Pokémon TCG Store</h3>
+            <p>
+              Tu tienda confiable para cartas Pokémon Trading Card Game.
+              Ofrecemos los mejores precios y calidad garantizada.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Enlaces Rápidos</h3>
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Contacto</a>
+          </div>
+          <div class="footer-section">
+            <h3>Contacto</h3>
+            <p>Email: info@pokemontcgstore.com</p>
+            <p>Teléfono: +1 234 567 890</p>
+            <p>Dirección: Calle Pokémon 123, Ciudad</p>
+          </div>
+          <div class="footer-section">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2023 Pokémon TCG Store. Todos los derechos reservados.</p>
+          <p>
+            Pokémon y Pokémon TCG son marcas registradas de Nintendo, Creatures
+            Inc. y GAME FREAK Inc.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Módulos JavaScript -->
+    <script type="module" src="/JS/cart.js"></script>
+    <script type="module" src="/JS/data.js"></script>
+    <script type="module" src="/JS/expansions.js"></script>
+    <script type="module" src="/JS/main.js"></script>
+    <script type="module" src="JS/products.js"></script>
+    <script type="module" src="/JS/store.js"></script>
+    <script type="module" src="JS/reviews.js"></script>
+  </body>
+</html>

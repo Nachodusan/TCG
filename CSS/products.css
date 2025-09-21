@@ -1,0 +1,144 @@
+.products {
+  background-color: var(--color-bg);
+  padding: 40px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: var(--text-color);
+  position: relative;
+}
+
+.section-title:after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 10px auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 20px;
+  color: var(--color-text);
+  transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-secondary);
+}
+
+.product-image {
+  height: 200px;
+  width: 100%;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  max-width: 90%;
+  max-height: 180px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1);
+}
+.product-card h3 {
+  color: var(--color-primary);
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.product-expansion {
+  font-size: 14px;
+  color: var(--dark-gray);
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.product-card .price {
+  color: var(--color-accent-green);
+  font-weight: bold;
+}
+/* Sección de Valorizaciones */
+.product-ratings {
+  margin-bottom: 15px;
+}
+
+.rating-stars {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.rating-stars i {
+  color: #ffc107;
+  font-size: 14px;
+  margin-right: 2px;
+}
+
+.rating-average {
+  font-size: 14px;
+  color: var(--dark-gray);
+  margin-bottom: 5px;
+}
+
+.rating-count {
+  font-size: 12px;
+  color: var(--medium-gray);
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--text-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.no-products {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: var(--dark-gray);
+}
