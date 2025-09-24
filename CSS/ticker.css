@@ -1,0 +1,35 @@
+.ticker {
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  background: #00bcd4;
+}
+
+.ticker__wrap {
+  display: flex;
+  width: max-content;
+  animation: ticker 60s linear infinite;
+}
+
+.ticker__item {
+  padding: 0.3rem 1rem;
+  margin: 0 1.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: 1rem;
+
+  color: #fff;
+  border-radius: 999px; /* estilo pill */
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  } /* solo hasta la mitad porque duplicamos contenido */
+}

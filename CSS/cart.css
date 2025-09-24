@@ -5,12 +5,14 @@
   right: -400px;
   width: 350px;
   height: 100vh;
-  background-color: var(--white);
+  background-color: #0b0b0bed; /* Color sólido oscuro */
+  color: #ffffff; /* Texto blanco */
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   transition: right 0.3s;
   z-index: 1000;
   padding: 20px;
   overflow-y: auto;
+  font-family: "Bebas Neue", sans-serif; /* Fuente principal cambiada a Inter */
 }
 
 .cart-modal.open {
@@ -23,14 +25,20 @@
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #333;
 }
 
+.cart-header h2 {
+  font-family: "Bebas Neue", sans-serif; /* Fuente especial para títulos */
+}
+
+/* Botón cerrar */
 .close-cart {
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
+  color: #fff;
 }
 
 .cart-items {
@@ -41,13 +49,13 @@
   display: flex;
   margin-bottom: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #333;
 }
 
 .cart-item-image {
   width: 60px;
   height: 60px;
-  background-color: #f8f8f8;
+  background-color: #222;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,10 +74,12 @@
 .cart-item-name {
   font-weight: bold;
   margin-bottom: 5px;
+  font-family: "Bebas Neue", sans-serif; /* Fuente especial para nombres */
 }
 
 .cart-item-price {
   color: var(--primary-color);
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .cart-item-quantity {
@@ -91,8 +101,11 @@
   width: 40px;
   text-align: center;
   margin: 0 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #555;
   border-radius: 3px;
+  background: #111;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .remove-item {
@@ -108,22 +121,24 @@
   font-weight: bold;
   margin-bottom: 20px;
   text-align: right;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .checkout-btn {
   width: 100%;
   padding: 12px;
-  background-color: var(--primary-color);
+  background-color: #ffcb05;
   color: var(--white);
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-family: "Inter", sans-serif; /* Fuente principal cambiada a Inter */
 }
 
 .checkout-btn:hover {
-  background-color: var(--secondary-color);
+  background-color: #fcdb58;
   color: var(--text-color);
 }
 

@@ -1,50 +1,44 @@
 // Base de datos de expansiones
 export const expansions = [
   {
-    id: "all",
-    name: "Todas las Expansiones",
-    image:
-      "https://icon-library.com/images/pokeball-icon-png/pokeball-icon-png-2.jpg",
-  },
-  {
-    id: "swsh4",
-    name: "Oscuro Iluminado",
-    image: "https://images.pokemontcg.io/swsh4/symbol.png",
-  },
-  {
     id: "swsh9",
-    name: "Vínculo de Sangre",
-    image: "https://images.pokemontcg.io/swsh9/symbol.png",
+    name: "",
+    image: "/images/Untitled_design-removebg-preview.png",
   },
   {
     id: "sm10",
-    name: "Unificación",
-    image: "https://images.pokemontcg.io/sm10/symbol.png",
+    name: "",
+    image:
+      "/images/destined_rivals_43b8f20a-a19d-4bc3-bdf6-1bb5b8a92322-removebg-preview.png",
   },
   {
     id: "xy2",
-    name: "Destellos",
-    image: "https://images.pokemontcg.io/xy2/symbol.png",
+    name: "",
+    image: "/images/journey_together-removebg-preview.png",
   },
   {
     id: "dp5",
-    name: "Ráfaga de Triumph",
-    image: "https://images.pokemontcg.io/dp5/symbol.png",
+    name: "",
+    image:
+      "/images/prueba_pe_da25c25c-39e0-488e-a226-f4a5cf0ace91-removebg-preview.png",
   },
   {
     id: "ex13",
-    name: "Destino Final",
-    image: "https://images.pokemontcg.io/ex13/symbol.png",
+    name: "",
+    image:
+      "/images/prueba_ss_456e44ad-2f93-4087-89ee-de99e4def887-removebg-preview.png",
   },
   {
     id: "swsh5",
-    name: "Estallido de Leyendas",
-    image: "https://images.pokemontcg.io/swsh5/symbol.png",
+    name: "",
+    image:
+      "/images/prueba_pf_25b67c7f-b2b7-403a-ac02-33f5ad0179af-removebg-preview.png",
   },
   {
     id: "sm12",
-    name: "Equipo Up",
-    image: "https://images.pokemontcg.io/sm12/symbol.png",
+    name: "",
+    image:
+      "/images/prueba_151_51843778-c0da-4e6b-9375-439b511337e2-removebg-preview.png",
   },
 ];
 
@@ -82,7 +76,7 @@ export const products = [
     price: 34.99,
     image: "https://images.pokemontcg.io/sm10/78.png",
     rarity: "Rara",
-    expansion: "sm10",
+    expansion: "sm",
     ratings: {
       average: 4.7,
       count: 67,

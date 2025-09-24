@@ -16,7 +16,7 @@ export function renderExpansions() {
                 <div class="expansion-image">
                     <img src="${expansion.image}" alt="${expansion.name}">
                 </div>
-                <div class="expansion-name">${expansion.name}</div>
+                
             </div>
         `;
   });

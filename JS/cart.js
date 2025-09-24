@@ -9,12 +9,14 @@ const cartCount = document.getElementById("cart-count");
 const cartItems = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
 const overlay = document.getElementById("overlay");
+const closeCartBtn = document.getElementById("close-cart");
 
 // Abrir carrito
 export function openCart() {
   cartModal.classList.add("open");
   overlay.classList.add("active");
   document.body.style.overflow = "hidden";
+  updateCartUI();
 }
 
 // Cerrar carrito
@@ -23,6 +25,17 @@ export function closeCart() {
   overlay.classList.remove("active");
   document.body.style.overflow = "auto";
 }
+
+// Eventos de cierre
+if (closeCartBtn) {
+  closeCartBtn.addEventListener("click", closeCart);
+}
+if (overlay) {
+  overlay.addEventListener("click", closeCart);
+}
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeCart();
+});
 
 // Añadir producto al carrito
 export function addToCart(e) {
@@ -70,32 +83,30 @@ export function updateCartUI() {
       total += itemTotal;
 
       itemsHTML += `
-                <div class="cart-item">
-                    <div class="cart-item-image">
-                        <img src="${item.image}" alt="${item.name}">
-                    </div>
-                    <div class="cart-item-info">
-                        <div class="cart-item-name">${item.name}</div>
-                        <div class="cart-item-price">$${item.price.toFixed(
-                          2
-                        )}</div>
-                        <div class="cart-item-quantity">
-                            <button class="quantity-btn decrease" data-id="${
-                              item.id
-                            }">-</button>
-                            <input type="number" class="quantity-input" value="${
-                              item.quantity
-                            }" min="1" data-id="${item.id}">
-                            <button class="quantity-btn increase" data-id="${
-                              item.id
-                            }">+</button>
-                            <button class="remove-item" data-id="${
-                              item.id
-                            }"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                </div>
-            `;
+        <div class="cart-item">
+          <div class="cart-item-image">
+            <img src="${item.image}" alt="${item.name}">
+          </div>
+          <div class="cart-item-info">
+            <div class="cart-item-name">${item.name}</div>
+            <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+            <div class="cart-item-quantity">
+              <button class="quantity-btn decrease" data-id="${
+                item.id
+              }">-</button>
+              <input type="number" class="quantity-input" value="${
+                item.quantity
+              }" min="1" data-id="${item.id}">
+              <button class="quantity-btn increase" data-id="${
+                item.id
+              }">+</button>
+              <button class="remove-item" data-id="${
+                item.id
+              }"><i class="fas fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      `;
     });
   }
 
@@ -159,7 +170,9 @@ function changeQuantity(e) {
 
 // Eliminar item
 function removeItem(e) {
-  const productId = parseInt(e.target.getAttribute("data-id"));
+  const productId = parseInt(
+    e.target.closest("button").getAttribute("data-id")
+  );
   cart = cart.filter((item) => item.id !== productId);
   updateCartUI();
   saveCartToStorage();

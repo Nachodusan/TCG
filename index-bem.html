@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCG Express</title>
+    <link rel="stylesheet" href="/index.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Bitcount+Prop+Double+Ink:wght@100..900&family=Bungee+Tint&family=Fruktur:ital@0;1&family=Geist+Mono:wght@100..900&family=Inter:opsz@14..32&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Kablammo&family=Knewave&family=Oi&family=Pixelify+Sans:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oi&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <!-- Resto del contenido permanece igual -->
+  <body>
+    <!-- Overlay para el carrito -->
+    <div class="cart-overlay" id="overlay"></div>
+
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <span>TCG Express</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+
+            <button
+              id="toggle-theme"
+              class="toggle-theme"
+              title="Modo Día/Noche"
+            >
+              <img
+                id="theme-icon"
+                src="images/download.svg"
+                alt="Cambiar tema"
+                class="theme-icon"
+              />
+            </button>
+
+            <li class="header__cart-icon" id="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count" id="cart-count">0</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>¡Atrapa Todas Las Cartas Pokémon!</h1>
+        <p>
+          Descubre las mejores cartas Pokémon TCG para tu colección. Envíos a
+          todo el mundo.
+        </p>
+        <a href="#products" class="btn">Ver Colección</a>
+      </div>
+    </section>
+
+    <div class="ticker">
+      <div class="ticker__wrap">
+        <div class="ticker__item">50% de descuento en sobres seleccionados</div>
+        <div class="ticker__item">Envío gratis en pedidos mayores a $50</div>
+        <div class="ticker__item">Promoción válida hasta fin de mes</div>
+        <div class="ticker__item">50% de descuento en sobres seleccionados</div>
+        <div class="ticker__item">Envío gratis en pedidos mayores a $50</div>
+        <div class="ticker__item">Promoción válida hasta fin de mes</div>
+        <div class="ticker__item">50% de descuento en sobres seleccionados</div>
+        <div class="ticker__item">Envío gratis en pedidos mayores a $50</div>
+        <div class="ticker__item">Promoción válida hasta fin de mes</div>
+        <div class="ticker__item">50% de descuento en sobres seleccionados</div>
+        <div class="ticker__item">Envío gratis en pedidos mayores a $50</div>
+        <div class="ticker__item">Promoción válida hasta fin de mes</div>
+      </div>
+    </div>
+
+    <!-- Expansiones -->
+    <section class="expansions">
+      <div class="container">
+        <div class="expansions-header">
+          <h2 class="expansions-title"></h2>
+          <!-- Flechas eliminadas -->
+        </div>
+
+        <div class="expansions-container">
+          <div class="expansions-grid" id="expansions-grid">
+            <!-- Las expansiones se cargarán con JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="products" id="products">
+      <div class="container">
+        <h2 class="section-title">Nuestras Cartas Destacadas</h2>
+        <div class="product-grid" id="product-grid">
+          <!-- Los productos se cargarán con JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrito -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-header">
+        <h2>Carrito</h2>
+        <button id="close-cart" class="close-cart">✕</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-total" id="cart-total">Total: $0.00</div>
+      <button class="checkout-btn" id="checkout-btn">Finalizar Compra</button>
+    </div>
+    <div id="overlay" class="cart-overlay"></div>
+
+    <section class="reviews" id="reviews">
+      <h2 class="reviews__title">Valoraciones de nuestros clientes</h2>
+      <div class="reviews__list">
+        <article class="review">
+          <h3 class="review__name">Carlos M.</h3>
+          <div class="review__rating">⭐⭐⭐⭐⭐</div>
+          <p class="review__text">
+            Excelente servicio, las cartas llegaron en perfecto estado y muy
+            rápido.
+          </p>
+        </article>
+
+        <article class="review">
+          <h3 class="review__name">Ana P.</h3>
+          <div class="review__rating">⭐⭐⭐⭐</div>
+          <p class="review__text">
+            Muy buena atención, aunque me gustaría ver más variedad en
+            expansiones.
+          </p>
+        </article>
+
+        <article class="review">
+          <h3 class="review__name">Luis R.</h3>
+          <div class="review__rating">⭐⭐⭐⭐⭐</div>
+          <p class="review__text">
+            La mejor tienda online de TCG que he probado, 100% recomendada.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__section">
+            <h3 class="footer__title">Pokémon TCG Store</h3>
+            <p class="footer__text">
+              Tu tienda confiable para cartas Pokémon Trading Card Game.
+              Ofrecemos los mejores precios y calidad garantizada.
+            </p>
+          </div>
+          <div class="footer__section">
+            <h3 class="footer__title">Enlaces Rápidos</h3>
+            <a href="#" class="footer__link">Inicio</a>
+            <a href="#" class="footer__link">Productos</a>
+            <a href="#" class="footer__link">Contacto</a>
+          </div>
+          <div class="footer__section">
+            <h3 class="footer__title">Contacto</h3>
+            <p class="footer__text">Email: info@pokemontcgstore.com</p>
+            <p class="footer__text">Teléfono: +1 234 567 890</p>
+            <p class="footer__text">Dirección: Calle Pokémon 123, Ciudad</p>
+          </div>
+          <div class="footer__section">
+            <h3 class="footer__title">Síguenos</h3>
+            <div class="footer__social-icons">
+              <a href="#" class="footer__social-link"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="footer__social-link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="footer__social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="footer__social-link"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <p>&copy; 2023 Pokémon TCG Store. Todos los derechos reservados.</p>
+          <p>
+            Pokémon y Pokémon TCG son marcas registradas de Nintendo, Creatures
+            Inc. y GAME FREAK Inc.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Módulos JavaScript -->
+    <script type="module" src="/JS/cart.js"></script>
+    <script type="module" src="/JS/data.js"></script>
+    <script type="module" src="/JS/expansions.js"></script>
+    <script type="module" src="/JS/main.js"></script>
+    <script type="module" src="JS/products.js"></script>
+    <script type="module" src="/JS/store.js"></script>
+    <script type="module" src="JS/reviews.js"></script>
+    <script type="module" src="JS/light.js"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </body>
+</html>

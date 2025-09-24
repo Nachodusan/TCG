@@ -1,90 +1,157 @@
-/* Expansiones */
 .expansions {
-  padding: 40px 0;
-  background-color: var(--white);
+  padding: 2.5rem 0;
+  text-align: center;
+
+  background-color: #0b0c12; /* color base sólido */
+  /* debajo del hero */
+}
+
+/* Degradado arriba */
+.expansions::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* altura del degradado superior */
+  background: linear-gradient(to top, rgba(11, 12, 18, 0), rgba(11, 12, 18, 1));
+  pointer-events: none;
+}
+
+/* Degradado abajo */
+.expansions::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* altura del degradado inferior */
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 12, 18, 0),
+    rgba(11, 12, 18, 1)
+  );
+  pointer-events: none;
 }
 
 .expansions-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centrar el título */
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .expansions-title {
-  font-size: 24px;
-  color: var(--text-color);
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: normal;
+  font-family: "Oi", cursive;
+  text-align: center;
 }
 
-.expansions-nav {
-  display: flex;
-  gap: 10px;
-}
-
-.nav-btn {
-  background-color: var(--primary-color);
-  color: var(--white);
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s;
-}
-
-.nav-btn:hover {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-}
-
+/* Contenedor con scroll */
 .expansions-container {
-  overflow-x: hidden;
-  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: #1f8fff transparent;
+  display: flex;
+  justify-content: center; /* Centrar el grid horizontal */
+  padding-bottom: 20px; /* 👈 espacio extra entre tarjetas y barra */
+
+  /* Quitar flechas */
+  -ms-overflow-style: none; /* IE y Edge antiguo */
+  scrollbar-width: none; /* Firefox */
 }
 
+/* Scrollbar minimalista para Webkit */
+.expansions-container::-webkit-scrollbar {
+  height: 6px;
+}
+.expansions-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.expansions-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #1f8fff, #00ffe0);
+  border-radius: 999px;
+}
+
+/* Grid horizontal CENTRADO */
 .expansions-grid {
   display: flex;
-  gap: 20px;
-  transition: transform 0.3s ease;
+  gap: 1.5rem;
+  align-items: stretch;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+  justify-content: center; /* Centrar las tarjetas */
+  flex-wrap: nowrap;
+  margin-bottom: 10px; /* 👈 más espacio con el scroll */
 }
 
+/* Tarjeta futurista */
 .expansion-item {
   flex: 0 0 auto;
-  width: 200px;
-  background-color: #f8f8f8;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s;
+  width: 200px; /* Un poco más grande */
+  background: linear-gradient(145deg, #11121a, #0b0c12);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.15),
+    inset 0 0 6px rgba(31, 143, 255, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar contenido interno */
+  justify-content: center;
+  padding: 0px;
 }
 
 .expansion-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 16px rgba(0, 255, 200, 0.25),
+    inset 0 0 8px rgba(31, 143, 255, 0.35);
 }
 
-.expansion-item.active {
-  border: 3px solid var(--secondary-color);
+/* Imagen dentro de la tarjeta */
+.expansion-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.4));
 }
 
-.expansion-image {
-  height: 120px;
-  background-color: #ddd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.expansion-image img {
-  max-width: 90%;
-  max-height: 100px;
-}
-
-.expansion-name {
-  padding: 15px;
+/* Nombre futurista CENTRADO */
+.expansion-item p {
+  color: #e5e5e5;
+  font-size: 1.1rem;
+  font-weight: normal;
+  text-shadow: 0 0 4px rgba(23, 46, 46, 0.3);
+  font-family: "Oi", cursive;
   text-align: center;
-  font-weight: bold;
+  margin: 0;
+  width: 100%;
+}
+
+/* Responsive para expansiones */
+@media (max-width: 768px) {
+  .expansions-title {
+    font-size: 2rem;
+  }
+
+  .expansion-item {
+    width: 160px;
+  }
+
+  .expansions-grid {
+    gap: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expansion-item {
+    width: 140px;
+  }
+
+  .expansions-title {
+    font-size: 1.8rem;
+  }
 }

@@ -1,0 +1,93 @@
+/* Modo Día (claro) */
+body.light-mode {
+  color: #222;
+}
+body.light-mode header {
+  color: #fff;
+}
+body.light-mode footer {
+  color: #fff;
+}
+body.light-mode .hero {
+  color: #fff;
+}
+body.light-mode .expansions {
+  background: #fff;
+  color: #222;
+}
+body.light-mode .products {
+  background: #fff;
+  color: #222;
+}
+body.light-mode .reviews {
+  color: #fff;
+  background-color: #fff;
+}
+body.light-mode .cart-modal {
+  background: #ffffffe6;
+  color: #222;
+}
+body.light-mode .close-cart {
+  color: #222;
+}
+
+body.light-mode .btn {
+  color: #222;
+}
+body.light-mode .checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffcb05;
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Inter", sans-serif; /* Fuente principal cambiada a Inter */
+}
+body.light-mode .checkout-btn:hover {
+  background-color: #fcdb58;
+  color: var(--text-color);
+}
+
+.checkout-btn:hover {
+  background-color: #fcdb58;
+  color: var(--text-color);
+}
+
+body.light-mode .ticker {
+  color: #222;
+}
+body.light-mode .cart-modal {
+  border: 1px solid #ccc;
+}
+body.light-mode .product-card {
+  background: #fafafa;
+  color: #222;
+  border: 1px solid #e0e0e0;
+}
+body.light-mode .hero {
+  background-image: url("/images/Pokemon-Mystery-Dungeon_imgupscaler.ai_General_4K.jpg"); /* Cambia la ruta según tu estructura */
+  background-size: cover;
+  background-position: center;
+}
+
+.toggle-theme {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-left: 1.5rem;
+  margin: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.theme-icon {
+  width: 1rem;
+  height: 1rem;
+  filter: brightness(0) invert(1); /* se ve blanco en oscuro */
+}

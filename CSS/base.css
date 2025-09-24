@@ -3,30 +3,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: "Oi", cursive;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #ffcb05;
-  color: #333;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s;
-}
-
-.btn:hover {
-  background-color: #e60012;
-  color: white;
-  transform: translateY(-3px);
 }
 
 .section-title {
@@ -35,6 +15,8 @@
   font-size: 32px;
   color: #333;
   position: relative;
+  font-family: "Oi", cursive;
+  font-weight: normal;
 }
 
 .section-title:after {
@@ -67,6 +49,7 @@
   padding: 40px;
   font-size: 18px;
   color: #666;
+  font-family: "Oi", cursive;
 }
 
 /* Responsive */

@@ -7,14 +7,15 @@
 @import url("/CSS/hero.css");
 @import url("/CSS/products.css");
 @import url("/CSS/reviews.css");
-
+@import url("/CSS/ticker.css");
+@import url("/CSS/index-mode.css");
 /* Estilos generales y reset */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
+
 :root {
   --color-bg: #0d0d0d;
   --color-surface: #1c1c1c;
@@ -29,16 +30,17 @@
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: "Poppins", sans-serif;
+  font-family: "Oi", cursive;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 /* Contenedores y estructura general */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 /* Estilos responsive */

@@ -1,9 +1,13 @@
 /* Header */
 header {
-  background-color: var(--primary-color);
+  background: transparent;
   color: var(--white);
   padding: 20px 0;
-  box-shadow: var(--shadow);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .header-content {
@@ -13,10 +17,13 @@ header {
 }
 
 .logo {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: normal;
   display: flex;
   align-items: center;
+  color: var(--white);
+  font-family: "Oi", cursive;
+  padding-right: 35%;
 }
 
 .logo img {
@@ -30,14 +37,16 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 nav ul li a {
   color: var(--white);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
   transition: color 0.3s;
+  font-family: "Oi", cursive;
+  font-size: 18px;
 }
 
 nav ul li a:hover {
@@ -47,6 +56,8 @@ nav ul li a:hover {
 .cart-icon {
   position: relative;
   cursor: pointer;
+  color: var(--white);
+  font-size: 20px;
 }
 
 .cart-count {
@@ -61,5 +72,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
+  font-weight: normal;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 12px;
 }
