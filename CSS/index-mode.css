@@ -68,7 +68,7 @@ body.light-mode .product-card {
   border: 1px solid #e0e0e0;
 }
 body.light-mode .hero {
-  background-image: url("/images/Pokemon-Mystery-Dungeon_imgupscaler.ai_General_4K.jpg"); /* Cambia la ruta según tu estructura */
+  background-image: url("/images/Pokemon.jpg"); /* Cambia la ruta según tu estructura */
   background-size: cover;
   background-position: center;
 }
