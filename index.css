@@ -1,14 +1,14 @@
 /* Importación de todos los módulos */
-@import url("/CSS/base.css");
-@import url("/CSS/cart.css");
-@import url("/CSS/expansions.css");
-@import url("/CSS/footer.css");
-@import url("/CSS/header.css");
-@import url("/CSS/hero.css");
-@import url("/CSS/products.css");
-@import url("/CSS/reviews.css");
-@import url("/CSS/ticker.css");
-@import url("/CSS/index-mode.css");
+@import url("../CSS/base.css");
+@import url("../CSS/cart.css");
+@import url("../CSS/expansions.css");
+@import url("../CSS/footer.css");
+@import url("../CSS/header.css");
+@import url("../CSS/hero.css");
+@import url("../CSS/products.css");
+@import url("../CSS/reviews.css");
+@import url("../CSS/ticker.css");
+@import url("../CSS/index-mode.css");
 /* Estilos generales y reset */
 * {
   margin: 0;
