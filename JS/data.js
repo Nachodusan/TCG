@@ -3,42 +3,42 @@ export const expansions = [
   {
     id: "swsh9",
     name: "",
-    image: "/images/Untitled_design-removebg-preview.png",
+    image: "images/Untitled_design-removebg-preview.png",
   },
   {
     id: "sm10",
     name: "",
     image:
-      "/images/destined_rivals_43b8f20a-a19d-4bc3-bdf6-1bb5b8a92322-removebg-preview.png",
+      "images/destined_rivals_43b8f20a-a19d-4bc3-bdf6-1bb5b8a92322-removebg-preview.png",
   },
   {
     id: "xy2",
     name: "",
-    image: "/images/journey_together-removebg-preview.png",
+    image: "images/journey_together-removebg-preview.png",
   },
   {
     id: "dp5",
     name: "",
     image:
-      "/images/prueba_pe_da25c25c-39e0-488e-a226-f4a5cf0ace91-removebg-preview.png",
+      "images/prueba_pe_da25c25c-39e0-488e-a226-f4a5cf0ace91-removebg-preview.png",
   },
   {
     id: "ex13",
     name: "",
     image:
-      "/images/prueba_ss_456e44ad-2f93-4087-89ee-de99e4def887-removebg-preview.png",
+      "images/prueba_ss_456e44ad-2f93-4087-89ee-de99e4def887-removebg-preview.png",
   },
   {
     id: "swsh5",
     name: "",
     image:
-      "/images/prueba_pf_25b67c7f-b2b7-403a-ac02-33f5ad0179af-removebg-preview.png",
+      "images/prueba_pf_25b67c7f-b2b7-403a-ac02-33f5ad0179af-removebg-preview.png",
   },
   {
     id: "sm12",
     name: "",
     image:
-      "/images/prueba_151_51843778-c0da-4e6b-9375-439b511337e2-removebg-preview.png",
+      "images/prueba_151_51843778-c0da-4e6b-9375-439b511337e2-removebg-preview.png",
   },
 ];
 
