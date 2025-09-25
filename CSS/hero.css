@@ -1,7 +1,7 @@
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
-    url("/images/Pokemon-Mystery-Dungeon_imgupscaler.ai_General_4K.jpg")
+    url("images/Pokemon-Mystery-Dungeon_imgupscaler.ai_General_4K.jpg")
       no-repeat center center/cover;
   color: var(--white);
   text-align: center;
