@@ -1,4 +1,4 @@
-import { expansions } from "data.js";
+import { expansions } from "./data.js";
 
 // Variables globales
 export let currentExpansion = "all";
